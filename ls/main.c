@@ -44,6 +44,8 @@ void processDir(char* path) {
  * Checks the number of arguments first, to check the options that are added.
  * After checking the command line options, print out the corresponding message (or file information).
  *
+ * The ls command prints out the list of the file(s) and directory(s) in the current directory.
+ *
  * @param argc the number of command line arguments.
  * @param argv the values of the command line arguments.
  * @return If succeeded, returns 0. Otherwise, returns -1.
