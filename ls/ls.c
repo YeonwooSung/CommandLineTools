@@ -221,7 +221,7 @@ int checkArgs(int argc, char** argv) {
  */
 void freeDirectory(struct dirent** directory, int numOfFiles) {
 
-    for(int i = 0; i < num_files; i++) {
+    for(int i = 0; i < numOfFiles; i++) {
         free(directory[i]);
     }
 

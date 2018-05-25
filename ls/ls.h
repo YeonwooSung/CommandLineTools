@@ -8,7 +8,7 @@
 #define _XOPEN_SOURCE 700
 #define BUFFER_SIZE 255
 
-#define USAGE_MESSAGE "Usage: ./ls-program (-n -l -R -S -t -i -r -a)"
+#define USAGE_MESSAGE "Usage: ./ls-program (-n -l -R -S -t -i -r -a) (File path)"
 
 // To print out the colorful output messages.
 #define BLUE "\x1b[34m"
@@ -61,5 +61,8 @@ void printDir(struct dirent** dir, int files);
 // The prototype of function in the ls.c file.
 void freeDirectory(struct dirent** dir, int num_files);
 int checkArgs(int argc, char** argv);
+
+// The prototype of function in the main.c file.
+void processDir(char* path);
 
 #endif //_LS_H
