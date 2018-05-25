@@ -17,7 +17,7 @@
  */
 char* getFileName(const char* fileName) {
 
-    char* pathName = malloc( (strlen(path) + 2 + strlen(fileName)) * sizeof(char) );
+    char* pathName = (char *) malloc( (strlen(path) + 2 + strlen(fileName)) * sizeof(char) );
 
     strcpy(pathName, path);
 
