@@ -5,7 +5,6 @@ The implementation of shell script commands
 
 
 ## TODO list 
-- echo
 - chmod
 - chown
 - chgrp
@@ -30,3 +29,4 @@ The implementation of shell script commands
 ## Implemented
 - ls
 - pwd
+- echo
