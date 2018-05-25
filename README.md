@@ -11,7 +11,6 @@ The implementation of shell script commands
 - cp
 - rmdir
 - rm
-- cd
 - cat
 - grep
 - clear
@@ -30,3 +29,4 @@ The implementation of shell script commands
 - pwd
 - echo
 - mkdir
+- cd
