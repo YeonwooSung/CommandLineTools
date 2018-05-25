@@ -21,7 +21,7 @@ int main() {
     if (getcwd(cwd, sizeof(cwd)) != NULL) {
         printf("%s\n", cwd);
     } else {
-        perror("getcwd() error");
+        perror("getcwd() error\n");
     }
 
     free(cwd); //free the allocated memory
