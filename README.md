@@ -5,7 +5,6 @@ The implementation of shell script commands
 
 
 ## TODO list 
-- chmod
 - chown
 - chgrp
 - cp
@@ -23,6 +22,7 @@ The implementation of shell script commands
 - fg
 - bg
 
+
 ## Implemented
 - ls
 - pwd
@@ -30,3 +30,4 @@ The implementation of shell script commands
 - mkdir
 - cd
 - rmdir
+- chmod
