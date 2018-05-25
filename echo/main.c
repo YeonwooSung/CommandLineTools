@@ -14,11 +14,13 @@
  * @return 0
  */
 int main(int argc, char *argv[]) {
-    if (argc > 1) {
+    if (argc > 1) { //check the number of command line arguments.
         for (unsigned int i = 1; i < argc) {
             printf("%s", argv[i]);
         }
     }
+
+    printf("\n");
 
     return 0;
 }
