@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77d2ca7a-13b6-4012-b147-c24d83964f1f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/echo/main.c" afterPath="$PROJECT_DIR$/echo/main.c" />
-      <change beforePath="$PROJECT_DIR$/pwd/main.c" afterPath="$PROJECT_DIR$/pwd/main.c" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Directory/rmdir/Makefile" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Directory/rmdir/main.c" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +24,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -32,6 +33,26 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Directory/rmdir/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Directory/rmdir/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,6 +82,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pwd/main.c" />
         <option value="$PROJECT_DIR$/echo/main.c" />
+        <option value="$PROJECT_DIR$/Directory/rmdir/main.c" />
+        <option value="$PROJECT_DIR$/Directory/rmdir/Makefile" />
       </list>
     </option>
   </component>
@@ -109,7 +132,7 @@
               <item name="CommandImplementation" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="CommandImplementation" type="462c0819:PsiDirectoryNode" />
               <item name="Directory" type="462c0819:PsiDirectoryNode" />
-              <item name="mkdir" type="462c0819:PsiDirectoryNode" />
+              <item name="rmdir" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -162,12 +185,12 @@
       <workItem from="1527216861531" duration="775000" />
       <workItem from="1527218453370" duration="857000" />
       <workItem from="1527219349606" duration="184000" />
-      <workItem from="1527235359204" duration="2298000" />
+      <workItem from="1527235359204" duration="2767000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11594000" />
+    <option name="totallyTimeSpent" value="12063000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="712" extended-state="6" />
@@ -348,14 +371,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Directory/mkdir/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -364,6 +379,30 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Directory/mkdir/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Directory/rmdir/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Directory/rmdir/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
