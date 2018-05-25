@@ -9,7 +9,6 @@ The implementation of shell script commands
 - chown
 - chgrp
 - cp
-- mkdir
 - rmdir
 - rm
 - cd
@@ -30,3 +29,4 @@ The implementation of shell script commands
 - ls
 - pwd
 - echo
+- mkdir
