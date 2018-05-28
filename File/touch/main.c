@@ -11,14 +11,37 @@
 #define USAGE_MESSAGE "Usage: touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ..."
 #define FAILED_MESSAGE "failed to create file"
 
-
+/**
+ * Check the options that are given through the standard input.
+ * If the user input the wrong option, print out the usage message and terminate the process.
+ *
+ * @param argc the number of command line arguments.
+ * @param argv the values of command line arguments.
+ * @param fileName the name of the file.
+ */
 void checkOptions(int argc, char *argv[], char *fileName) {
     int opt;
 
-    while ((opt = getopt(argc, argv, "A:r:t:acfhm")) != -1) {
+    while ((opt = getopt(argc, argv, "A:r:t:s")) != -1) {
 
         switch (opt) {
-            //TODO cases
+
+            case 'A' :
+                //TODO
+                break;
+
+            case 'r' :
+                //TODO
+                break;
+
+            case 't' :
+                //TODO
+                break;
+
+            default:
+                fprintf(stderr, USAGE_MESSAGE);
+                exit(0); //terminate the touch process.
+
         } //switch statement ends
 
     } //the while loop ends
