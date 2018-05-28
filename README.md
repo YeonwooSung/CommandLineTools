@@ -21,7 +21,7 @@ The implementation of shell script commands
 - compress
 - fg
 - bg
-
+- touch
 
 ## Implemented
 - ls
