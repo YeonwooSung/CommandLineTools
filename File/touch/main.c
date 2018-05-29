@@ -8,7 +8,7 @@
 #include <fcntl.h>
 
 //macros
-#define USAGE_MESSAGE "Usage: touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ..."
+#define USAGE_MESSAGE "Usage: touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ...\n"
 #define FAILED_MESSAGE "failed to create file"
 
 /**

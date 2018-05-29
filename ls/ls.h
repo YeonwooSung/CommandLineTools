@@ -8,7 +8,7 @@
 #define _XOPEN_SOURCE 700
 #define BUFFER_SIZE 255
 
-#define USAGE_MESSAGE "Usage: ./ls-program (-n -l -R -S -t -i -r -a) (File path)"
+#define USAGE_MESSAGE "Usage: ./ls-program (-n -l -R -S -t -i -r -a) (File path)\n"
 
 // To print out the colorful output messages.
 #define BLUE "\x1b[34m"
