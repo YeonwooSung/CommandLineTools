@@ -15,7 +15,7 @@
  */
 int main(int argc, char *argv[]) {
     if (argc > 1) { //check the number of command line arguments.
-        for (unsigned int i = 1; i < argc) {
+        for (unsigned int i = 1; i < argc; i++) {
             printf("%s\n", argv[i]);
         }
     }
