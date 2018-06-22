@@ -22,13 +22,19 @@ void setModificationTimeStat() {
     //TODO
 }
 
+void setAccessTimeStat() {
+    //TODO
+}
+
 /**
  * Check the options that are given through the standard input.
  * If the user input the wrong option, print out the usage message and terminate the process.
+ * After finish checking all options, this method does corresponding actions that the user asked.
  *
  * @param argc the number of command line arguments.
  * @param argv the values of command line arguments.
  * @param fileName the name of the file.
+ * @param the FILE type pointer points the target file.
  */
 void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
     char flag = 0; //the flag to check if the user input any options.
@@ -44,7 +50,7 @@ void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
     struct utimbuf newTimeInfo;
 
     //the while loop to check all command line options.
-    while ((opt = getopt(argc, argv, "a:m:r:t:")) != -1) {
+    while ((opt = getopt(argc, argv, "a:m:r:t:c:")) != -1) {
 
         switch (opt) { //the switch statement to check the command line options.
 
@@ -72,6 +78,9 @@ void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
                 strcpy(tTime, optarg);
                 break;
 
+            case 'c' :
+                flag += 16;
+
             default:
                 fprintf(stderr, USAGE_MESSAGE);
                 exit(0); //terminate the touch process.
@@ -90,6 +99,35 @@ void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
         stat(fileName, &fileStat);
 
         //TODO set stats that are according to option arguments.
+        if (flag >= 16) {
+            flag -= 16;
+
+            newTimeInfo.actime = time(NULL);
+            newTimeInfo.modtime = time(NULL);
+        }
+
+        if (flag >= 8) {
+            flag -= 8;
+
+            //TODO what does the -t option really do?
+        }
+
+        if (flag  >= 4) {
+            flag -= 4;
+
+            //TODO rename
+        }
+
+        if (flag >= 2) {
+            flag -= 2;
+
+            //TODO set the modification time by using epoch time.
+        }
+
+        if (flag == 1) {
+            //TODO set the access time by using epoch time.
+        }
+        utime(fileName, &newTimeInfo);
     }
 }
 

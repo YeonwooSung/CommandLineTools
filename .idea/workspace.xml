@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="33">
+              <first_editor relative-caret-position="56">
                 <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
                 <folding />
               </first_editor>
@@ -39,8 +39,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/File/touch/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+            <state relative-caret-position="-312">
+              <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -131,6 +131,17 @@
               <item name="File" type="462c0819:PsiDirectoryNode" />
               <item name="touch" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ImplementShellCommands" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="ImplementShellCommands" type="462c0819:PsiDirectoryNode" />
+              <item name="FilePermission" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ImplementShellCommands" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="ImplementShellCommands" type="462c0819:PsiDirectoryNode" />
+              <item name="FilePermission" type="462c0819:PsiDirectoryNode" />
+              <item name="chmod" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -187,12 +198,12 @@
       <workItem from="1527241427284" duration="32000" />
       <workItem from="1527490181889" duration="2194000" />
       <workItem from="1527780630503" duration="1612000" />
-      <workItem from="1529650697537" duration="4191000" />
+      <workItem from="1529650697537" duration="6752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22890000" />
+    <option name="totallyTimeSpent" value="25451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="712" extended-state="6" />
@@ -456,7 +467,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="33">
+          <first_editor relative-caret-position="56">
             <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
             <folding />
           </first_editor>
@@ -466,8 +477,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/File/touch/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="41" column="12" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        <state relative-caret-position="-312">
+          <caret line="36" column="55" lean-forward="false" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
           <folding />
         </state>
       </provider>
