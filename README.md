@@ -21,7 +21,6 @@ The implementation of shell script commands
 - compress
 - fg
 - bg
-- touch
 
 ## Implemented
 - ls
@@ -31,3 +30,4 @@ The implementation of shell script commands
 - cd
 - rmdir
 - chmod
+- touch
