@@ -31,8 +31,9 @@ void setModificationTimeStat() {
  * @param fileName the name of the file.
  */
 void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
-    char flag = 0;
+    char flag = 0; //the flag to check if the user input any options.
 
+    //the pointers to store the option arguments.
     char *aTime;
     char *mTime;
     char *tTime;
@@ -42,6 +43,7 @@ void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
     struct stat fileStat;
     struct utimbuf newTimeInfo;
 
+    //the while loop to check all command line options.
     while ((opt = getopt(argc, argv, "a:m:r:t:")) != -1) {
 
         switch (opt) { //the switch statement to check the command line options.
