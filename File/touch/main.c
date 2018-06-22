@@ -5,11 +5,22 @@
 //included libraries
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 #include <fcntl.h>
+#include <time.h>
+#include <utime.h>
+#include <sys/stat.h>
 
 //macros
 #define USAGE_MESSAGE "Usage: touch [-A [-][[hh]mm]SS] [-acfhm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ...\n"
 #define FAILED_MESSAGE "failed to create file"
+#define BASIC_SIZE 20
+#define LARGER_SIZE 40
+
+void setModificationTimeStat() {
+    //TODO
+}
 
 /**
  * Check the options that are given through the standard input.
@@ -19,23 +30,44 @@
  * @param argv the values of command line arguments.
  * @param fileName the name of the file.
  */
-void checkOptions(int argc, char *argv[], char *fileName) {
+void checkOptions(int argc, char *argv[], char *fileName, FILE *file) {
+    char flag = 0;
+
+    char *aTime;
+    char *mTime;
+    char *tTime;
+    char *rFileName;
+
     int opt;
+    struct stat fileStat;
+    struct utimbuf newTimeInfo;
 
-    while ((opt = getopt(argc, argv, "A:r:t:s")) != -1) {
+    while ((opt = getopt(argc, argv, "a:m:r:t:")) != -1) {
 
-        switch (opt) {
+        switch (opt) { //the switch statement to check the command line options.
 
-            case 'A' :
-                //TODO
+            case 'a' :
+                flag += 1;
+                aTime = (char *) malloc(sizeof(char) * BASIC_SIZE);
+                strcpy(aTime, optarg);
+                break;
+
+            case 'm' :
+                flag += 2;
+                mTime = (char *) malloc(sizeof(char) * BASIC_SIZE);
+                strcpy(mTime, optarg);
                 break;
 
             case 'r' :
-                //TODO
+                flag += 4;
+                rFileName = (char *) malloc(sizeof(char) * LARGER_SIZE);
+                strcpy(rFileName, optarg);
                 break;
 
             case 't' :
-                //TODO
+                flag += 8;
+                tTime = (char *) malloc(sizeof(char) * BASIC_SIZE);
+                strcpy(tTime, optarg);
                 break;
 
             default:
@@ -45,6 +77,18 @@ void checkOptions(int argc, char *argv[], char *fileName) {
         } //switch statement ends
 
     } //the while loop ends
+
+    strcpy(fileName, argv[optind]); //copy the file name by using variable optind to get the non-option argument.
+
+    file = fopen(fileName, "a"); //open the speicified file (or create new file)
+
+    //check the value of flag to know if there is any
+    if (flag != 0) {
+        //the stat function obtains information about the named file and writes it to the area pointed to by the buf argument.
+        stat(fileName, &fileStat);
+
+        //TODO set stats that are according to option arguments.
+    }
 }
 
 /**
@@ -59,14 +103,14 @@ void checkOptions(int argc, char *argv[], char *fileName) {
 int main(int argc, char *argv[]) {
 
     //check the number of command line arguments.
-    if (argc < 2) {
+    if (argc < 2 || argc %2 != 0) {
         fprintf(stderr, USAGE_MESSAGE);
         return -1;
     }
 
     char *fileName = (char *) malloc(sizeof(char) * 50);
+    File *file; //the target file's pointer.
 
-    //TODO actions for the corresponding options?
     checkOptions(argc, argv, fileName);
 
     int n = open(fileName, O_WRONLY|O_CREAT|O_TRUNC);
