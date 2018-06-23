@@ -20,11 +20,7 @@ int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "invalid number of arguments\n");
     } else {
-        int n = chdir(argv[1]);
-
-        if (n != 0) {
-            fprintf(stderr, "Directory not changed\n");
-        }
+        int n = chdir(argv[1]) || die();
     }
 
     return 0;
