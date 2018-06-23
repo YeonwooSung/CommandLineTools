@@ -14,7 +14,7 @@
 #include <sys/stat.h>
 
 //macros
-#define USAGE_MESSAGE "Usage: touch [-acm] [-r file] [-t [[CC]YY]MMDDhhmm[.SS]] file ...\n"
+#define USAGE_MESSAGE "Usage: touch [-acm] [-r file] [-t [[CC]YYYY]MMDDhhmm[.SS]] file ...\n"
 #define FAILED_MESSAGE "failed to create file"
 #define BASIC_SIZE 20
 #define LARGER_SIZE 40
