@@ -46,8 +46,17 @@ void doChown (const char *file_path, const char *user_name, const char *group_na
     }
 }
 
+/**
+ * The chown command supports the user to change the user name and group name of the specific file.
+ *
+ * @param argc the count of the command line arguments
+ * @param argv the values of the command line arguments
+ * @return 0
+ */
 int main(int argc, char *argv[]) {
-    if (argc == 1) {
+    if (argc <= 1) {
         fprintf(stderr, USAGE_MESSAGE);
     }
+
+    return 0;
 }
