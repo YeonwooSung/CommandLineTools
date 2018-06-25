@@ -3,10 +3,12 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 #include <sys/types.h>
 #include <pwd.h>
 
-#define USAGE_MESSAGE "usage: chown [-fhv] [-R [-H | -L | -P]] owner[:group] file ...\n\tchown [-fhv] [-R [-H | -L | -P]] :group file ..."
+#define USAGE_MESSAGE "usage: chown [-cfhv] [-R] owner[:group] file ...\n\tchown [-cfhv] [-R] :group file ..."
 #define FAILED "chown failed\n"
 #define UID_FAILED "Failed to get uid\n"
 #define GID_FAILED "Failed to get gid\n"
@@ -46,6 +48,30 @@ void doChown (const char *file_path, const char *user_name, const char *group_na
     }
 }
 
+void checkArguments(int argc, char *argv[], char *optFlag) {
+    int opt;
+
+    while ((opt = getopt(argc, argv, "cfhv:R:"))) {
+
+        switch (opt) {
+            case 'c' :
+                break;
+            case 'f' :
+                break;
+            case 'h' :
+                break;
+            case 'v' :
+                break;
+            case 'R' :
+                break;
+            default:
+                fprintf(stderr, USAGE_MESSAGE);
+                exit(1);
+        }//switch statement ends
+
+    }//while loop ends
+}
+
 /**
  * The chown command supports the user to change the user name and group name of the specific file.
  *
@@ -57,6 +83,8 @@ int main(int argc, char *argv[]) {
     if (argc <= 1) {
         fprintf(stderr, USAGE_MESSAGE);
     }
+
+    char option = 0;
 
     return 0;
 }
