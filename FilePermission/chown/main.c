@@ -94,6 +94,7 @@ int main(int argc, char *argv[]) {
     }
 
     char option = 0;
+    char suppressMessages = 0;
 
     checkArguments(argc, argv, &option);
 
@@ -113,7 +114,7 @@ int main(int argc, char *argv[]) {
 
     //check if the user used the -f option
     if (option >= 1) {
-        //TODO
+        suppressMessages = 1;
 
         option -= 1;
     }
