@@ -97,5 +97,26 @@ int main(int argc, char *argv[]) {
 
     checkArguments(argc, argv, &option);
 
+    //check if the user used the -R option
+    if (option >= 4) {
+        //TODO
+
+        option -= 4;
+    }
+
+    //check if the user used the -h option
+    if (option >= 2) {
+        //TODO
+
+        option -= 2;
+    }
+
+    //check if the user used the -f option
+    if (option >= 1) {
+        //TODO
+
+        option -= 1;
+    }
+
     return 0;
 }
