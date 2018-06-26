@@ -8,7 +8,7 @@
 #include <sys/types.h>
 #include <pwd.h>
 
-#define USAGE_MESSAGE "usage: chown [-cfhv] [-R] owner[:group] file ...\n\tchown [-cfhv] [-R] :group file ..."
+#define USAGE_MESSAGE "usage: chown [-f] [-h] [-R] owner[:group] file ...\n\tchown [-f] [-h] [-R] :group file ..."
 #define FAILED "chown failed\n"
 #define UID_FAILED "Failed to get uid\n"
 #define GID_FAILED "Failed to get gid\n"
@@ -48,21 +48,28 @@ void doChown (const char *file_path, const char *user_name, const char *group_na
     }
 }
 
+/**
+ * This function checks the command line options and modify the value of the option flag.
+ *
+ * @param argc the argument count
+ * @param argv the values of command line arguments
+ * @param optFlag the option flag to check which options are selected.
+ */
 void checkArguments(int argc, char *argv[], char *optFlag) {
     int opt;
+    char flag = 0;
 
-    while ((opt = getopt(argc, argv, "cfhv:R:"))) {
+    while ((opt = getopt(argc, argv, "f:h:R:"))) {
 
         switch (opt) {
-            case 'c' :
+            case 'f' : //The -f option suppresses all error messages except usage message.
+                flag += 1;
                 break;
-            case 'f' :
+            case 'h' : //Just change the owner name of the symbolic link, not the file that of the file pointed to by it.
+                flag += 2;
                 break;
-            case 'h' :
-                break;
-            case 'v' :
-                break;
-            case 'R' :
+            case 'R' : //Descends directories recursively, changing the ownership for each file.
+                flag += 4;
                 break;
             default:
                 fprintf(stderr, USAGE_MESSAGE);
@@ -70,6 +77,8 @@ void checkArguments(int argc, char *argv[], char *optFlag) {
         }//switch statement ends
 
     }//while loop ends
+
+    *optFlag = flag;
 }
 
 /**
@@ -85,6 +94,8 @@ int main(int argc, char *argv[]) {
     }
 
     char option = 0;
+
+    checkArguments(argc, argv, &option);
 
     return 0;
 }
