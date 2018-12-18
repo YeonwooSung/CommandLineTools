@@ -39,7 +39,7 @@ time_t convertStringToEpochTime(char *str) {
 
     //use the for loop to get the year
     for (i = 0; i < 4; i++) {
-        year[i] = *str;
+        yearArray[i] = *str;
         str += 1; //add 1 to str so that the for loop could access 4 characters in the str.
     }
     yearArray[4] = '\0'; //put the terminator at the end of the yearArray.
@@ -47,7 +47,7 @@ time_t convertStringToEpochTime(char *str) {
 
     //use the for loop to get the month
     for (i = 0; i < 2; i++) {
-        month[i] = *str;
+        monthArray[i] = *str;
         str += 1;
     }
     monthArray[2] = '\0';
@@ -221,9 +221,9 @@ int main(int argc, char *argv[]) {
     }
 
     char *fileName = (char *) malloc(sizeof(char) * 50);
-    File *file; //the target file's pointer.
+    FILE *file; //the target file's pointer.
 
-    checkOptions(argc, argv, fileName);
+    checkOptions(argc, argv, fileName, file);
 
     int n = open(fileName, O_WRONLY|O_CREAT|O_TRUNC);
 
