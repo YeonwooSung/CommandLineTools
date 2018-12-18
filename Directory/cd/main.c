@@ -3,9 +3,7 @@
 //
 
 #include <stdio.h>
-//TODO the conio.h and dir.h are non-standard header files!
-#include <conio.h>
-#include <dir.h>
+#include <unistd.h>
 
 /**
  * The main function for the cd command.
@@ -21,7 +19,9 @@ int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "invalid number of arguments\n");
     } else {
-        int n = chdir(argv[1]) || die();
+        if (chdir(argv[1]) != 0) {
+            fprintf(stderr, "Directory not changed\n");
+        }
     }
 
     return 0;
