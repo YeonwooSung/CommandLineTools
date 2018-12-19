@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <grp.h>
 #include <pwd.h>
 
 #define USAGE_MESSAGE "usage: chown [-f] [-h] [-R] owner[:group] file ...\n\tchown [-f] [-h] [-R] :group file ..."
@@ -20,7 +21,7 @@
  * @param user_name the new user name.
  * @param group_name the new group name.
  */
-void doChown (const char *file_path, const char *user_name, const char *group_name) {
+void doChown(const char *file_path, const char *user_name, const char *group_name) {
     uid_t uid; //user id
     gid_t gid; //group id
     struct passwd *pwd;
@@ -30,7 +31,8 @@ void doChown (const char *file_path, const char *user_name, const char *group_na
 
     //check if the user information is correct
     if (pwd == NULL) {
-        die(UID_FAILED);
+        fprintf(stderr, UID_FAILED);
+        exit(0);
     }
 
     uid = pwd->pw_uid;
@@ -39,12 +41,15 @@ void doChown (const char *file_path, const char *user_name, const char *group_na
 
     //check if the group information is correct.
     if (grp == NULL) {
-        die(GID_FAILED);
+        fprintf(stderr, GID_FAILED);
+        exit(0);
     }
+
     gid = grp->gr_gid;
 
     if (chown(file_path, uid, gid) == -1) {
-        die(FAILED);
+        fprintf(stderr, FAILED);
+        exit(0);
     }
 }
 
