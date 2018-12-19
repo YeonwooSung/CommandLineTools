@@ -7,7 +7,6 @@ The implementation of shell script commands
 ## TODO list
 - chgrp
 - rm
-- cat
 - grep
 - clear
 - ps
@@ -21,6 +20,8 @@ The implementation of shell script commands
 - bg
 
 ## In progress
+- chown
+- cat
 
 ## Implemented
 - ls
@@ -31,5 +32,4 @@ The implementation of shell script commands
 - rmdir
 - chmod
 - touch
-- chown
 - cp
