@@ -4,10 +4,8 @@
 The implementation of shell script commands
 
 
-## TODO list 
-- chown
+## TODO list
 - chgrp
-- cp
 - rm
 - cat
 - grep
@@ -21,6 +19,10 @@ The implementation of shell script commands
 - compress
 - fg
 - bg
+
+## In progress
+- chown
+- cp
 
 ## Implemented
 - ls
