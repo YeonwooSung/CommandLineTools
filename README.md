@@ -21,8 +21,6 @@ The implementation of shell script commands
 - bg
 
 ## In progress
-- chown
-- cp
 
 ## Implemented
 - ls
@@ -33,3 +31,5 @@ The implementation of shell script commands
 - rmdir
 - chmod
 - touch
+- chown
+- cp
