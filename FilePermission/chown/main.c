@@ -154,6 +154,7 @@ int main(int argc, char *argv[]) {
 
     if (rFlag) {
         //TODO recursive chown
+        //TODO also, need to consider if the user also used the -h option!
     } else if (hFlag) {
         //TODO change ownership of the encountered symbolic link
     } else {
