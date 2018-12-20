@@ -21,7 +21,6 @@ The implementation of shell script commands
 
 ## In progress
 - chown
-- cat
 
 ## Implemented
 - ls
@@ -33,3 +32,4 @@ The implementation of shell script commands
 - chmod
 - touch
 - cp
+- cat
