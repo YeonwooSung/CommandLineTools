@@ -20,7 +20,7 @@ The implementation of shell script commands
 - bg
 
 ## In progress
-- chown
+- chown: -h option (encountered links) and -R option (recursive chown)
 
 ## Implemented
 - ls
