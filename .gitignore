@@ -2,3 +2,5 @@
 *.iml
 clion-log.txt
 .DS_Store
+.vscode
+.dist
